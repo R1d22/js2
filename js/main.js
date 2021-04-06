@@ -22,10 +22,16 @@ form.addEventListener ('submit', (ev) => {
     ev.preventDefault();
 
     const formData = new FormData (ev.target);
-    const FNmame = formData.get('f-name');
+    const FName = formData.get('f-name');
     const LName = formData.get('l-name');
     const MName = formData.get('m-name');
-    const submit = formData.get('submit');
+    //const submit = formData.get('submit');
 
 
-})
+    const html = `
+        <div>
+            <div>Firstname: ${FName}</div>
+            <div>Lastmane: ${LName}</div>
+            <div>Midlname: ${MName}</div>
+        </div>
+    `;
